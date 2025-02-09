@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="index.css">
+
+</head>
+<div id="main-wrapper">
+  <form>
+    <label for="City">Input city</label><input type="text" name="City" id="City" />
+      <br />
+            <label for="Country">Input country code (first 2 letters)</label><input type="text" name="Country" id="Country" />
+      <br />
+  </form>
+  <section id="Weather-container">
+  <button id="Fetch-weather-btn" name="Fetch-weather-btn">Fetch weather</button>
+  <button id="Toggle-unit-btn" name="Toggle-unit-btn">In fahrenheit</button>
+  <button id="Save-location-btn" name="Save-location-btn">Save location</button>
+  <header id="Weather-display">
+  </header>
+  <ul id="Saved-locations-btns-container">
+  </ul>
+  </section>
+  <br />
+</div>
+<!-- script files below-->
+<script src="index.js"></script> 
+</body>
+</html>
