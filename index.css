@@ -15,3 +15,6 @@ input[type="text"] {
 #Toggle-unit-btn {
     display: none;
 } /* will be shown once weather is fetched */
+#Fetch-weather-btn {
+    margin-bottom: 10px;
+}

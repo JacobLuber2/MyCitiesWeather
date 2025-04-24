@@ -2,40 +2,29 @@
 
 ## Features
 
--The client is able to get the current tempature in any country/city.  
--To obtain the weather data, a fetch request is sent to the openweathermap api.  
--The client can toggle the displayed weather to be in **°F** or **°C**.  
--A location can be saved to get the tempature when clicking the **Save location** button.  
--A location can also be removed via clicking the remove button when the saved location is generated.  
--Duplicate locations are not allowed.
+- The client is able to get the current tempature in any country/city.  
+- To obtain the weather data, a fetch request is sent to the openweathermap api.  
+- The client can toggle the displayed weather to be in **°F** or **°C**.  
+- A location can be saved to get the tempature when clicking the **Save location** button.  
+- A location can also be removed via clicking the remove button when the saved location is generated.  
+- Duplicate locations are not allowed.
 
 ## Technologies used
 
--HTML
--CSS
--JavaScript
--openweathermap API
+- **HTML**
+- **CSS**
+- **JavaScript**
+- **Git Bash (project management)**  
+- **VSCode (Codebase management)**  
+- **openweathermap API (weather data)**
 
 ## Usage
 
-### 1. Clone the Repository
+**Usage Instructions**
 
-Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/JacobLuber2/MyCitiesWeather
-```
-
-After cloning, navigate to the project directory and run the project locally:
-
-```bash
-cd MyCitiesWeather
-code . (For opening the project in VSCode)
-```
-
-### 2. Video Demo
-
-### 4. GitHub Pages URL
-
-You can view the live version of the project at:
-[https://your-username.github.io/your-repository-name](https://your-username.github.io/your-repository-name)
+1. Video demonstration at [Google Drive](https://drive.google.com/drive/folders/1WPtrEO1JeMeknNhpuNRsf7SndHTUCeuy)
+2. Or visit the live version of the app at [MyCitiesWeather](https://jacobluber2.github.io/MyCitiesWeather/)
+3. Alternatively, Clone the repository using the following command:
+    ```bash
+    git clone https://github.com/JacobLuber2/MyCitiesWeather.git
+    ```

@@ -4,25 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WeatherApp</title>
+  <title>My Cities Weather</title>
   <link rel="stylesheet" href="index.css">
 
 </head>
 <div id="main-wrapper">
-  <form>
-    <label for="City">Input city</label><input type="text" name="City" id="City" />
+  <form id="Location-input">
+    <label for="City">Input city</label><input type="text" name="City" id="City" required />
       <br />
-            <label for="Country">Input country code (first 2 letters)</label><input type="text" name="Country" id="Country" />
-      <br />
+            <label for="Country">Input country code first 2 letters</label><input type="text" name="Country" id="Country" required />
+        <button id="Fetch-weather-btn" name="Fetch-weather-btn" type="submit">Fetch weather</button>
   </form>
   <section id="Weather-container">
-  <button id="Fetch-weather-btn" name="Fetch-weather-btn">Fetch weather</button>
   <button id="Toggle-unit-btn" name="Toggle-unit-btn">In fahrenheit</button>
   <button id="Save-location-btn" name="Save-location-btn">Save location</button>
   <header id="Weather-display">
   </header>
-  <ul id="Saved-locations-btns-container">
-  </ul>
+  <section id="Saved-locations-btns-container">
+  </section>
   </section>
   <br />
 </div>

@@ -1,16 +1,13 @@
 // html element selectors
 let countryInput = document.getElementById("Country");
-let cityInput =
-    document.getElementById(
-        "City"
-    ); /* country used for fetching via clicking saved location button */
+let cityInput = document.getElementById("City");
 let weatherDisplay = document.getElementById("Weather-display");
-let fetchWeatherBtn = document.getElementById("Fetch-weather-btn");
+let locationInputForm = document.getElementById("Location-input");
 let toggleUnitBtn = document.getElementById("Toggle-unit-btn");
 let saveBtn = document.getElementById("Save-location-btn");
 let savedLocations = document.getElementById("Saved-locations-btns-container"); // locations container
 // initial state
-let unitInF = false; /* false means the tempature will be displayed in °C or the data has not been fetched yet, true means the tempature will be displayed in °F and will be the default value after the first fetch */
+let unitInF; /* false means the tempature will be displayed in °C true means the tempature will be displayed in °F and will be the default value after the first fetch, when empty means no weather data has been fetched. */
 let key = "f604db20a39eb25fb77c35625cd7a41c";
 let data = null; // weather data
 let degrees; // api call returns value in kelvin
@@ -29,18 +26,19 @@ function getWeather(city, country) {
             data = weather;
         })
         .catch((err) => console.error(err));
-    /* makes toggle unit and save location buttons available after inital fetch */
+    // makes toggle unit and save location buttons available after inital fetch
     toggleUnitBtn.style.display = "inline";
     saveBtn.style.display = "inline";
 }
-
-fetchWeatherBtn.addEventListener("click", (event) => {
+locationInputForm.addEventListener("submit", (event) => {
     event.preventDefault();
     getWeather(cityInput.value, countryInput.value);
+    cityInput.value = "";
+    countryInput.value = "";
 });
 // displays weather and handles tempature units
 function displayWeather(weather) {
-    if (unitInF == false) {
+    if (!unitInF) {
         toggleUnitBtn.textContent = "In fahrenheit";
         degrees = Math.round(((weather.main.temp - 273.15) * 9) / 5 + 32);
         weatherDisplay.textContent = `It is currently ${degrees} °F in ${weather.name}, ${weather.sys.country}`;
@@ -52,7 +50,7 @@ function displayWeather(weather) {
 }
 toggleUnitBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    unitInF = !unitInF; // flips °F to or °C
+    unitInF = !unitInF; // flips to opposite unit
     displayWeather(data);
 });
 saveBtn.addEventListener("click", (event) => {
@@ -64,10 +62,8 @@ saveBtn.addEventListener("click", (event) => {
         savedLocation.style.display = "block";
         savedLocation.id = `${data.name}, ${data.sys.country}`;
         savedLocation.textContent = `fetch ${data.name}, ${data.sys.country}`;
-        let tempCity =
-            data.name; /* city used for fetching via clicking saved location button */
+        let tempCity = data.name; // city used for fetching via clicking saved location button
         let tempCountry = data.sys.country;
-        /* country used for fetching via clicking saved location button */
         savedLocation.addEventListener("click", (event) => {
             event.preventDefault();
             getWeather(tempCity, tempCountry);
