@@ -22,7 +22,7 @@
 
 **Usage Instructions**
 
-1. Video demonstration at [Google Drive](https://drive.google.com/drive/folders/1WPtrEO1JeMeknNhpuNRsf7SndHTUCeuy)
+1. Video demonstration at [Google Drive](https://drive.google.com/file/d/1SAjxq3JSLVeF2HP3-Hwsib8xG5HYwVTQ/view)
 2. Or visit the live version of the app at [MyCitiesWeather](https://jacobluber2.github.io/MyCitiesWeather/)
 3. Alternatively, Clone the repository using the following command:
     ```bash
